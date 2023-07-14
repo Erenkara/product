@@ -1,0 +1,36 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.1'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.streaem'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.2'
+	implementation 'org.springframework.data:spring-data-commons:2.5.5'
+	runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.2'
+	testImplementation 'junit:junit:4.13.2'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.0'
+	testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.8.0'
+	testImplementation 'org.mockito:mockito-core:4.1.0'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	implementation "org.projectlombok:lombok:1.18.6"
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

@@ -1,0 +1,2 @@
+data-ingestion:
+  product-data-url: http://localhost:4001/productdata
