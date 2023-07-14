@@ -47,16 +47,21 @@ Start the application:
 To retrieve information for a single product:
 
 GET http://localhost:8080/products/{id}
+
 To retrieve all products of a given category (with optional stock filter):
 
-GET http://localhost:8080/products?category={category}&inStock={true/false}
+GET http://localhost:8080/products/category/{category}?inStockOnly={true/false}
+
 To update a product:
 
 PUT http://localhost:8080/products/{id}
+
 Request body: JSON representation of the updated product
+
 To set the current stock level for a given product:
 
 PUT http://localhost:8080/products/{id}/stock
+
 Request body: JSON object with a "stockLevel" field representing the new stock level
 
 
