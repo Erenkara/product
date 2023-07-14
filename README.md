@@ -1,4 +1,4 @@
-# Product Platform
+# Product
 
 Product Platform is a stand-alone service that allows retailers and brands to manage and interact with product data. It ingests product data from a JSON feed, provides REST endpoints to retrieve and update product information, and allows for setting stock levels.
 
@@ -31,7 +31,7 @@ git clone https://github.com/Erenkara/product
 
 Build the project:
 
-cd product-platform
+cd product
 ./gradlew build
 
 
